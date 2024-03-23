@@ -15,17 +15,22 @@ function getDistance() {
 
 function getDistanceHint(distance) {
     if (distance < 10) {
-        color = "#ff0000"
+        color = "#ff0000";
         return "Very close!!";
     } else if (distance < 20) {
+        color = "#6495ED";
         return "Close!";
     } else if (distance < 40) {
+        color = "#4169E1";
         return "Near";
     } else if (distance < 90) {
+        color = "#0000FF";
         return "Somewhere around";
     } else if (distance < 150) {
+        color = "#0000CD";
         return "Not even close";
     } else if (distance < 300) {
+        color = "#00008B";
         return "Too far";
     }
 }
@@ -56,7 +61,7 @@ mapElement.addEventListener("click", (event) => {
 
     ctx.beginPath();
 
-    ctx.arc(posX, posY, 50, 0, 2 * Math.PI);
+    ctx.arc(posX, posY, 15, 0, 2 * Math.PI);
 
     ctx.fill();
     //////////////////
